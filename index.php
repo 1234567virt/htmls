@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+<?php
+$title="Главная";
+$h1="Санрайс";
+?>
     <head>
         <meta charset="UTF-8">
-        <title><?php ?></title>
+        <title><?php echo $title ?></title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -21,7 +25,7 @@
         <div class='content'>
             
         <h1>
-         Санрайс
+         <?php echo $h1 ?>
         </h1>
         
         <h4>
