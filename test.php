@@ -1,48 +1,15 @@
 <?php 
-function plus ($p1,$p2){
-    return $p1+$p2;
-}
-
-function minus ($p1,$p2){
-    return $p1-$p2;
-}
-
-function del($p1,$p2){
-    return $p1/$p2;
-}
-
-function ymn($p1,$p2){
-    return $p1*$p2;
-}
-
-function mathOperation($arg1, $arg2, $operation){
-    switch ($operation){
-        case '-':
-            echo minus($arg1,$arg2);
-             break;
-        case '+':
-            echo plus($arg1,$arg2);
-            break;
-        case "*":
-            echo ymn($arg1,$arg2);
-            break;
-        case "/":
-            echo del($arg1,$arg2);
-             break;
+ $st=4;
+ $v=2;
+ $i=0;
+function stepen($v,$st){
+if($i==$st){
+    return $v; 
     }
-}
-
-function bmr($a,$b){
-    switch(true){
-        case ($a>0 and $b>0):
-        return $a-$b;
-                break;
-    case ($a<0 and $b<0):
-        return $a*$b;
-            break;
-    case (($a<0 and $b>0) || ($b<0 and $a>0)):
-        return $a+$b;
-        break;
+    $v=$v*$v;
+    stv($v,$st);
+    $i++;
     }
-}
+
+echo stv($v,$st);
 ?>

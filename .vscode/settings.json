@@ -1,0 +1,6 @@
+{
+    "openInBrowser.defaultBrowser": "Chrome",
+    "phpserver.router": "",
+    "phpserver.phpPath": "",
+    "phpserver.browser": "firefox"
+}
