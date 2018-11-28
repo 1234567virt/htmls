@@ -1,7 +1,7 @@
 <?php 
 function bmr($a,$b){
 switch(true){
-    case ($a>0 and $b>0):
+    case ($a>=0 and $b>=0):
         return $a-$b;
     break;
     case ($a<0 and $b<0):
