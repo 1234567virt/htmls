@@ -19,16 +19,16 @@ function mathOperation($arg1, $arg2, $operation){
     switch ($operation){
         case '-':
             echo minus($arg1,$arg2);
-             break;
+        break;
         case '+':
             echo plus($arg1,$arg2);
-            break;
+        break;
         case "*":
             echo ymn($arg1,$arg2);
-            break;
+        break;
         case "/":
             echo del($arg1,$arg2);
-             break;
+        break;
     }
 }
 ?>

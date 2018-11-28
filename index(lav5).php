@@ -26,19 +26,19 @@ $year=date("Y");
         <div class='content'>
             
         <h1>
-         <?php echo $h1 ?>
+            <?php echo $h1 ?>
         </h1>
         
         <h4>
             <i>Покупай или проиграешь</i><br>
-            <i>Черная пятница <?php echo $year; ?> года</i>
+            
         </h4>
     </div>
        
         <div class='footer'> 
                 <hr>
                 <strong>
-                   Все права защищены<sup>&copy;</sup> <?php echo $year; ?>
+                   Все права защищены<sup>&copy;</sup> <?php echo $year;?>
                 </strong>
             </div>   
         </div>
