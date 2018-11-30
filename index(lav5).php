@@ -4,7 +4,7 @@
 $title="Главная";
 $h1="Санрайс";
 $year=date("Y");
- $menu= array("index.html"=>'Главная',"catalog.html"=>'Каталог',"contact.html"=>'Контакты' );
+ $menu= array("index.php"=>'Главная',"catalog.html"=>'Каталог',"contact.html"=>'Контакты' );
 ?>
     <head>
         <meta charset="UTF-8">
