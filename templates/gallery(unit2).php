@@ -1,6 +1,6 @@
 <?php
 
-
+//второе задание
 function one($path){
     $dir=scandir($path);
         foreach($dir as $key=>$val){
