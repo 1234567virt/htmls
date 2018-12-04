@@ -1,4 +1,5 @@
 <?php
+//Первое задание
 //require_once ('../engine/galerey_builder.php');
 require_once('../engine/galerey_builder.php');
 foreach($gallery as $key=>$val){
