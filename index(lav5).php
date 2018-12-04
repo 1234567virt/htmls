@@ -4,6 +4,7 @@
 $title="Главная";
 $h1="Санрайс";
 $year=date("Y");
+ $menu= array("index.php"=>'Главная',"catalog.html"=>'Каталог',"contact.html"=>'Контакты' );
 ?>
     <head>
         <meta charset="UTF-8">
@@ -15,9 +16,10 @@ $year=date("Y");
          <div class="header">
             <img src='img/logo.jpeg' alt='SonyValio' class='logo'>
             <ul>
-                 <li><a href="index.html">Главная</a></li>
-                 <li><a href="catalog.html">Каталог</a></li>
-                 <li><a href="contact.html">Контакты</a></li>
+                  <?php
+                foreach($menu as $url=>$key)
+                   echo  "<li><a href='".$url."'>".$key."</a></li>";
+                  ?>
             </ul>
             <hr>
         </div>
