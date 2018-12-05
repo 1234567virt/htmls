@@ -9,7 +9,7 @@ function one($path){
             }
             else{
                 if(is_dir($path.$val)){
-                     $dir=one($path.$val.DIRECTORY_SEPARATOR);
+                     one($path.$val.DIRECTORY_SEPARATOR);
                 }
                  else{
                      $info=pathinfo($path.$val);
@@ -17,9 +17,7 @@ function one($path){
                       echo "<a href='".$path.$val."' target='__blank'><img src='".$path.$val."' class='catalog' width='30%'></a>";
                   
                     }  
-                   else{
-                
-                   }
+  
                          
                 }
             }   
