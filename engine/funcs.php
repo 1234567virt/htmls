@@ -43,12 +43,19 @@ function one($path){
                      $info=pathinfo($path.$val);
                     if($info['extension']=='jpg'){
                      echo "<a href='".$path.$val."' target='__blank'><img src='".$path.$val."' class='catalog' width='30%'></a>";
-                  echo $val;
+                 // echo $val;
                     }  
   
                          
                 }
             }   
          }
+}
+
+function counts($row,$index,$link){
+    $count=$row+1;
+    
+   $sql="UPDATE `gallery` SET `count`='$count' WHERE `id`='$index'";
+ $result=mysqli_query($link,$sql);
 }
 ?>
