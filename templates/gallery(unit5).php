@@ -1,6 +1,6 @@
 <?php
   // require_once('/opt/lampp/htdocs/workspace.my/engine/db_connect.php');
-    require_once '../engine/db_connect.php';
+    require_once '../engine/init.php';
    $id=$_GET['id'];
    $sql="SELECT * FROM `product`";
      $result = mysqli_query($link, $sql) or die("Ошибка " . mysqli_error($link)); 
