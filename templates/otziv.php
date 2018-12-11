@@ -1,5 +1,5 @@
 <?php 
-require_once '../engine/db_connect.php';           
+// require_once '../engine/db_connect.php';           
    
     $sql="SELECT * FROM `otziv` WHERE id_galerey=$id";
     $massiv=mysqli_query($link,$sql);
