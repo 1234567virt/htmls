@@ -2,8 +2,8 @@
 <html lang="ru">
     <head>
     <?php
-  require_once('/opt/lampp/htdocs/workspace.my/engine/db_connect.php');
-  require_once('../engine/funcs.php');
+//   require_once('/opt/lampp/htdocs/workspace.my/engine/db_connect.php');
+  require_once '../engine/init.php';
   $year=date("Y");
       $id=$_GET['id'];
       $sql="SELECT * FROM `product` WHERE id=$id";
