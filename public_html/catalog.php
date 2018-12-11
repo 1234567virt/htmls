@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="UTF-8">
-    <link rel="stylesheet" href= "./css/style.css">
-    <title><?=$title ?></title>
- 
-    </head>
-    <body>
     <?php 
-   
         $title="Галерея";
         $h1="Санрайс";
         $year=date("Y");
     ?>
+    <link rel="stylesheet" href= "./css/style.css">
+    <title><?php echo $title ?></title>
+    <?php header('Content-type: text/html; charset=utf-8');?>
+    </head>
+    <body>
+   
         <div class='container'>
              <div class="header">
              <img src='./img/logo.jpeg' alt='SonyValio' class='logo'>
@@ -25,7 +24,7 @@
             </div>
              
             <div class='content'>
-                    <ul>
+                       <ul>
                             <li><a href="index.html">Главная</a></li>
                             <li><a href="catalog.html">Каталог</a></li>
                        </ul>
@@ -34,8 +33,15 @@
                 </h1>
               <div class='container'>
                     <?php
-                         require_once "../templates/gallery(unit4).php";
-                         ?>
+                         require_once "../templates/gallery(unit5).php";
+                         require_once "../templates/otziv.php";
+                         
+                    ?>
+                    <hr>
+                    <h2>Написать отзыв</h2>
+            <?php 
+            require_once "../templates/form_rev.php";
+            ?>
      </div>
             <div class='footer'> 
                 <hr>
