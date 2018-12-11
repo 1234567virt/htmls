@@ -27,12 +27,6 @@
    </form>
 <?php 
 if(isset($_POST['hero']) && isset($_POST['numberOne']) && isset($_POST['numberTwo'])){
-   // echo $_POST['hero'];
-   // echo $_POST['numberOne'];
-    
-
-  
-
     $result=mathOperation(clear($_POST['numberOne']),clear($_POST['numberTwo']),clear($_POST['hero']));
     echo "<span style='color:green;font-size:15px'>Ответ:".$result."<span>";
 }
