@@ -52,9 +52,9 @@ function one($path){
          }
 }
 
-function counts($row,$index,$link,$bd){
-    $count=$row+1;
-    $sql="UPDATE $bd SET `count`='$count' WHERE `id`='$index'";
+function counts($row,$id,$link,$bd){
+ 
+    $sql="UPDATE $bd SET `count`=count+1 WHERE `id`='$id'";
     $result=mysqli_query($link,$sql);
 }
 function clear($link,$value){
@@ -68,18 +68,7 @@ function rewiev($link,$Aftor,$Message,$id){
  
     $date=date('Y-m-d',time());
     if(isset($_POST['Aftor']) && isset($_POST['Message']) && isset($_POST['id'])){
-    //  $Aftor= mysqli_real_escape_string($link,  
-    //  htmlspecialchars(
-     // strip_tags($_POST['Aftor'])
-    // ));
-     // $message = mysqli_real_escape_string($link,
-     // htmlspecialchars(
-    //  strip_tags($_POST['Message'])
-    //  ));
-    //  $id = mysqli_real_escape_string($link,
-     // htmlspecialchars(
-     // strip_tags($_POST['id'])
-     // ));
+  
      $Aftor=clear($link,$_POST['Aftor']);
      $message =clear($link,$_POST['Message']);
       $id=clear($link,$_POST['id']);
@@ -107,5 +96,44 @@ function rewiev($link,$Aftor,$Message,$id){
     die(mysqli_error($link));
   }
   header("Location:../public_html/catalog.php?id='$id'");
+}
+
+
+function plus ($p1,$p2){
+    return $p1+$p2;
+}
+
+function minus ($p1,$p2){
+    return $p1-$p2;
+}
+
+function del($p1,$p2){
+    if($p1>0 && $p2>0){
+    return $p1/$p2;
+    }
+    else{
+        return 'Ошибка';
+    }
+}
+
+function ymn($p1,$p2){
+    return $p1*$p2;
+}
+
+function mathOperation($arg1, $arg2, $operation){
+    switch ($operation){
+        case '-':
+           return minus($arg1,$arg2);
+        break;
+        case '+':
+           return plus($arg1,$arg2);
+        break;
+        case "*":
+           return ymn($arg1,$arg2);
+        break;
+        case "/":
+           return del($arg1,$arg2);
+        break;
+    }
 }
   ?>
