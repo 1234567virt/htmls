@@ -1,5 +1,5 @@
 <?php 
-require_once '../engine/db_connect.php';           
+// require_once '../engine/db_connect.php';           
    
    
    $sql="SELECT * FROM `otziv_nout` WHERE `marka`='$marka'";
