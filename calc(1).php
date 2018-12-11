@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+   <?php require_once '../engine/funcs.php' ?>
 <html>
 <head>
+ 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
@@ -29,48 +31,8 @@ if(isset($_POST['hero']) && isset($_POST['numberOne']) && isset($_POST['numberTw
    // echo $_POST['numberOne'];
     
 
-    function plus ($p1,$p2){
-        return $p1+$p2;
-    }
-    
-    function minus ($p1,$p2){
-        return $p1-$p2;
-    }
-    
-    function del($p1,$p2){
-        if($p1>0 && $p2>0){
-        return $p1/$p2;
-        }
-        else{
-            return 'Ошибка';
-        }
-    }
-    
-    function ymn($p1,$p2){
-        return $p1*$p2;
-    }
-    
-    function mathOperation($arg1, $arg2, $operation){
-        switch ($operation){
-            case '-':
-               return minus($arg1,$arg2);
-            break;
-            case '+':
-               return plus($arg1,$arg2);
-            break;
-            case "*":
-               return ymn($arg1,$arg2);
-            break;
-            case "/":
-               return del($arg1,$arg2);
-            break;
-        }
-    }
-    function clear($value){
-        $value=htmlspecialchars(
-        strip_tags($value));
-        return $value;
-    }
+  
+
     $result=mathOperation(clear($_POST['numberOne']),clear($_POST['numberTwo']),clear($_POST['hero']));
     echo "<span style='color:green;font-size:15px'>Ответ:".$result."<span>";
 }
