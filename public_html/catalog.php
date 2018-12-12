@@ -2,11 +2,13 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./css/style.css">
-        <title><?=$title ?></title>
+    <link rel="stylesheet" href= "./css/style.css">
+    <title><?=$title ?></title>
+ 
     </head>
     <body>
     <?php 
+   
         $title="Галерея";
         $h1="Санрайс";
         $year=date("Y");
@@ -30,14 +32,10 @@
                 <h1>
                 Каталог
                 </h1>
-              <br>
+              <div class='container'>
                     <?php
-       //require_once "/opt/lampp/htdocs/workspace.my/templates/gallery(unit2).php";
-       require_once "../templates/gallery(unit2).php";
-            //require_once "/opt/lampp/htdocs/workspace.my/templates/gallery(unit2).php";
-           // require_once "../templates/gallery(unit1).php";
-        one('./');
-          ?>
+                         require_once "../templates/gallery(unit4).php";
+                         ?>
      </div>
             <div class='footer'> 
                 <hr>
