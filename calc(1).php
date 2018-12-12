@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-   <?php require_once '../engine/funcs.php' ?>
+   <?php require_once '../engine/init.php' ?>
 <html>
 <head>
  
@@ -13,7 +13,7 @@
 <body>
        
  
-  <form action="<?echo "calc(1).php";?>" method="post">
+  <form action="<?echo "calc.php";?>" method="post">
         <input type="text" placeholder="Значение 1" name="numberOne" required>
         <input type="text" placeholder="Значение 2" name="numberTwo" required>
     <p><select name="hero" required>
