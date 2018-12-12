@@ -17,7 +17,9 @@
 
 // ];
 $menu= ["index.php"=>'Главная',
-    "catalog.php?id_galerey=1"=>'Маленькие Фотографии',
-    "catalog.php?id_galerey=2"=>'Большие фотографии',
-    "contact.php"=>'Контакты' ];
+    "catalog.php?id=1"=>'Маленькие Фотографии',
+    "catalog.php?id=2"=>'Большие фотографии',
+    "contact.php"=>'Контакты',
+    "catalog.php?id=3"=>'Каталог товаров',
+];
 ?>
