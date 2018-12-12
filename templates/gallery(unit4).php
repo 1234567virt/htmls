@@ -1,7 +1,5 @@
 <?php
-    require_once('/opt/lampp/htdocs/workspace.my/engine/db_connect.php');
-  
-   $id=$_GET['id_galerey'];
+   $id=(int)$_GET['id_galerey'];
    $sql="SELECT * FROM `gallery` WHERE id_galerey=$id order by count desc";
      $result = mysqli_query($link, $sql) or die("Ошибка " . mysqli_error($link)); 
      
