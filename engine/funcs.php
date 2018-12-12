@@ -80,7 +80,7 @@ function rewiev($link,$Aftor,$Message,$id){
         die(mysqli_error($link));
       }
       header("Location:../public_html/catalog.php?id='$id'");
-  }
+  }---
 
   function review_nout($link,$Aftor,$Message,$id,$marka){
 
