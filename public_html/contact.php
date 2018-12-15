@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/style.css">
-    <title><?php echo $title?></title>
-</head>
-<body>
-  <?php
+<?php
   $title="Контакт";
 $h1="Санрайс";
 $year=date("Y");
 
   ?>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <title><?php echo $title ?></title>
+</head>
+<body>
+ 
         <div class='container'>
     <div class="header">
         <img src='./img/logo.jpeg' alt='SonyValio' class='logo'>
         <nav>
         <ul>
     
- <?php //require_once '/opt/lampp/htdocs/workspace.my/templates/menu.php' ?> 
+
      <?php  require_once ('../templates/menu.php');?>     
          </ul>
          </nav>

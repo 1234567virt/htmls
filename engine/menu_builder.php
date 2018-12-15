@@ -16,10 +16,13 @@
 //     ]
 
 // ];
-$menu= ["index.php"=>'Главная',
-    "catalog.php?id=1"=>'Маленькие Фотографии',
-    "catalog.php?id=2"=>'Большие фотографии',
+$menu= [
+    "index.php"=>'Главная',
+    "catalog.php?id=3"=>'Товары',
+    "calc.php"=>'Калькулятор',
     "contact.php"=>'Контакты',
-    "catalog.php?id=3"=>'Каталог товаров',
+    "cms/cms.php"=>'cms',
+    "logout.php"=>'Регистрация'
+    //"basket.php"=>'Корзина'
 ];
 ?>

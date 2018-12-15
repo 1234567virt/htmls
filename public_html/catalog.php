@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php header('Content-type: text/html; charset=utf-8');?>
 <html lang="ru">
     <head>
     <?php 
@@ -8,7 +9,7 @@
     ?>
     <link rel="stylesheet" href= "./css/style.css">
     <title><?php echo $title ?></title>
-    <?php header('Content-type: text/html; charset=utf-8');?>
+  
     </head>
     <body>
    
@@ -16,9 +17,7 @@
              <div class="header">
              <img src='./img/logo.jpeg' alt='SonyValio' class='logo'>
                 <ul>
-               
-                <?php //require_once '/opt/lampp/htdocs/workspace.my/templates/menu.php' ?>
-                <?php  require_once('../templates/menu.php');?>    
+                   <?php  require_once('../templates/menu.php');?>    
                 </ul>
                 <hr>
             </div>

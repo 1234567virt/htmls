@@ -52,11 +52,11 @@ function one($path){
          }
 }
 
-function counts($row,$index,$link,$bd){
-    $count=$row+1;
-    $sql="UPDATE $bd SET `count`='$count' WHERE `id`='$index'";
+function counts($row,$id,$link,$bd){
+    $sql="UPDATE $bd SET `count`=count+1 WHERE `id`='$id'";
     $result=mysqli_query($link,$sql);
 }
+
 function clear($link,$value){
     $value= mysqli_real_escape_string($link,  
     htmlspecialchars(
@@ -64,48 +64,22 @@ function clear($link,$value){
     return $value;
 }
 
-function rewiev($link,$Aftor,$Message,$id){
- 
-    $date=date('Y-m-d',time());
-    if(isset($_POST['Aftor']) && isset($_POST['Message']) && isset($_POST['id'])){
-    //  $Aftor= mysqli_real_escape_string($link,  
-    //  htmlspecialchars(
-     // strip_tags($_POST['Aftor'])
-    // ));
-     // $message = mysqli_real_escape_string($link,
-     // htmlspecialchars(
-    //  strip_tags($_POST['Message'])
-    //  ));
-    //  $id = mysqli_real_escape_string($link,
-     // htmlspecialchars(
-     // strip_tags($_POST['id'])
-     // ));
-     $Aftor=clear($link,$_POST['Aftor']);
-     $message =clear($link,$_POST['Message']);
-      $id=clear($link,$_POST['id']);
-      $date=date('Y-m-d',time());
-   $sql="INSERT INTO  `otziv` (`id_galerey`, `Aftor`, `text`, `date`) VALUES ('$id','$Aftor','$message','$date')";
-      mysqli_query($link,$sql);
-}
-    if(mysqli_error($link)){
-        die(mysqli_error($link));
-      }
-      header("Location:../public_html/catalog.php?id='$id'");
+function registration($link,$login,$password,$name,$call){
+    if(isset($login) && isset($password) && isset($name) && isset($call)){
+      $login=clear($link,$login);
+      $password=clear($link,$password);
+      $name=clear($link,$name);
+      $call=clear($link,$call);
+      $password=password_hash ($password, PASSWORD_BCRYPT);
+      mysqli_query($link ,"INSERT INTO `user`( `user_name`, `user_login`, `user_password`, `u_call`) VALUES
+            ('$name','$login','$password','$call')");
+               header("Location:../public_html/logout.php");
+    }
+    else{
+      echo "Ошибка пустые данные";
+  
+    }
   }
 
-  function review_nout($link,$Aftor,$Message,$id,$marka){
 
-    if(isset($_POST['Aftor']) && isset($_POST['Message']) && isset($_POST['id'])){
-    $Aftor=clear($link,$_POST['Aftor']);
-    $message =clear($link,$_POST['Message']);
-     $id=clear($link,$_POST['id']);
-     
-     $sql="INSERT INTO  `otziv_nout` (`marka`, `Aftor`, `text`) VALUES ('$marka','$Aftor','$message')";
-     mysqli_query($link,$sql);
-  }
-  if(mysqli_error($link)){
-    die(mysqli_error($link));
-  }
-  header("Location:../public_html/catalog.php?id='$id'");
-}
   ?>

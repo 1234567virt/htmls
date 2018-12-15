@@ -1,17 +1,12 @@
 <?php 
-require_once '../engine/db_connect.php';           
-   
-    $sql="SELECT * FROM `otziv` WHERE id_galerey=$id";
+     $sql="SELECT * FROM `otziv` WHERE id_galerey=$id";
     $massiv=mysqli_query($link,$sql);
-  echo "<br>";
+    echo "<br>";
    while($rower = mysqli_fetch_array($massiv)){
        echo "<hr>";
           echo "Дата:".$rower['date']."<br>";
           echo "Автор:".$rower['Aftor']."<br>";
           echo "Текст:".$rower['text']."<br>";
          
-         
- }
-
-
-                         ?>
+    }
+?>
